@@ -81,7 +81,7 @@ Returns the WDM file object that is associated with a framework file object.
 <a href="" id="---------wdfrequestgetparameters--------"></a>[**WdfRequestGetParameters**](https://msdn.microsoft.com/library/windows/hardware/ff549969)  
 Retrieves the parameters that are associated with a framework request object. If the [request type](https://msdn.microsoft.com/library/windows/hardware/ff552503) is **WdfRequestTypeCreate**, the **Parameters.Create** member of the [**WDF\_REQUEST\_PARAMETERS**](https://msdn.microsoft.com/library/windows/hardware/ff552472) structure contains information about the file creation request.
 
-Typically, the driver stores file information in the framework file object's context space. When your driver obtains an I/O request from one if its I/O queues, the driver can call [**WdfRequestGetFileObject**](https://msdn.microsoft.com/library/windows/hardware/ff549963) to obtain a handle to the framework file object that is associated with the request. The driver can then retrieve the file information that it stored in the framework file object's context space.
+Typically, the driver stores file information in the framework file object's context space. When your driver obtains an I/O request from one of its I/O queues, the driver can call [**WdfRequestGetFileObject**](https://msdn.microsoft.com/library/windows/hardware/ff549963) to obtain a handle to the framework file object that is associated with the request. The driver can then retrieve the file information that it stored in the framework file object's context space.
 
 Your driver can search an I/O queue for requests that are associated with a particular file by calling [**WdfIoQueueRetrieveRequestByFileObject**](https://msdn.microsoft.com/library/windows/hardware/ff548470).
 
